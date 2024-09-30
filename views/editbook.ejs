@@ -1,0 +1,69 @@
+<%- include('./base/header.ejs') %>
+
+<div class="container"></div>
+    <div class="alert bg-success my-3">
+         <h2 class="text-center" style="color: white;">Add Book</h2>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col" style="background-color: #a2b9bc ; border-radius: 2%;">
+            <form action="/updated/book/page/<%= book._id %>" method="post">
+                <div>
+                    <label for="" class="form-label">Book Title</label>
+                    <input type="text" name="bookTitle" class="form-control" value="<%= book.bookTitle %>">
+                </div>
+                <div>
+                    <label for="" class="form-label">Book Author</label>
+                    <input type="text" name="bookAuthor" class="form-control" value="<%= book.bookAuthor %>" >
+                </div>
+                <div>
+                    <label for="" class="form-label">Book Publisher</label>
+                    <input type="text" name="bookPublisher" class="form-control" value="<%= book.bookPublisher %>" >
+                </div>
+                <div>
+                    <label for="" class="form-label">Book Price </label>
+                    <input type="number" name="bookPrice" class="form-control" value="<%= book.bookPrice %>">
+                </div>
+                <div>
+                    <label for="" class="form-label">Book Description</label>
+                    <input type="text" name="bookDescription" class="form-control" value="<%= book.bookDescription %>"  >
+                </div>
+                <div>
+                    <label for="" class="form-label">Book Language</label>
+                    <input type="text" name="bookLanguage" class="form-control" value="<%= book.bookLanguage %>" >
+                </div>
+                <div>
+                    <label for="" class="form-label">Book Image</label>
+                    <input type="text" name="bookImage" class="form-control" value="<%= book.bookImage %>" >
+                </div>
+                <div>
+                    <label for="" class="form-label">Book Category</label>
+                    <input type="text" name="bookCategory" class="form-control" value="<%= book.bookCategory %>" >
+                </div>
+                <div>
+                    <label for="" class="form-label">Book Status</label>
+                    <input type="text" name="bookStatus" class="form-control" value="<%= book.bookStatus %>" >
+                </div>
+                <div>
+                    <label for="" class="form-label">Book Quantity</label>
+                    <input type="number" name="bookQuantity" class="form-control" value="<%= book.bookQuantity %>" >
+                </div>
+                <div>
+                    <label for="" class="form-label">Book Rating</label>
+                    <input type="number" name="bookRating" class="form-control" value="<%= book.bookRating %>" >
+                </div>
+                <input type="submit" value="Update Book" class="btn btn-warning my-3 w-100"></input>
+
+            </form>
+            
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
+
+
+
+<%- include('./base/footer.ejs') %>

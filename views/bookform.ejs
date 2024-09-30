@@ -1,0 +1,72 @@
+<%- include('./base/header.ejs') %>
+
+<div class="container" style="margin-top: 4%;">
+    <div class="alert bg-success ">
+         <h2 class="text-center" style="color: white;">Add Book</h2>
+    </div>
+</div>
+<div class="container" style="height: 100%;" >
+    <div class="row">
+        <div class="col"></div>
+        <div class="col" style="background-color: #070b0b47 ; border-radius: 2%;">
+            <form action="/add/new/book" method="post">
+                <div>
+                    <label for="" class="form-label">Book Title</label>
+                    <input type="text" name="bookTitle" class="form-control" >
+                </div>
+                <div>
+                    <label for="" class="form-label">Book Author</label>
+                    <input type="text" name="bookAuthor" class="form-control" >
+                </div>
+                <div>
+                    <label for="" class="form-label">Book Publisher</label>
+                    <input type="text" name="bookPublisher" class="form-control" >
+                </div>
+                <div>
+                    <label for="" class="form-label">Book Price </label>
+                    <input type="number" name="bookPrice" class="form-control">
+                </div>
+                <div>
+                    <label for="" class="form-label">Book Description</label>
+                    <input type="text" name="bookDescription" class="form-control"  >
+                </div>
+                <div>
+                    <label for="" class="form-label">Book Language</label>
+                    <input type="text" name="bookLanguage" class="form-control" >
+                </div>
+                <div>
+                    <label for="" class="form-label">Book Image</label>
+                    <input type="text" name="bookImage" class="form-control" >
+                </div>
+                <div>
+                    <label for="" class="form-label">Book Category</label>
+                    <input type="text" name="bookCategory" class="form-control" >
+                </div>
+                <div>
+                    <label for="" class="form-label">Book Status</label>
+                    <input type="text" name="bookStatus" class="form-control" >
+                </div>
+                <div>
+                    <label for="" class="form-label">Book Quantity</label>
+                    <input type="number" name="bookQuantity" class="form-control" >
+                </div>
+                <div>
+                    <label for="" class="form-label">Book Rating</label>
+                    <input type="number" name="bookRating" class="form-control" >
+                </div>
+                <div>
+                    <input type="file" class="form-labrl">
+                </div>
+                <input type="submit" value="Add Book" class="btn btn-warning my-3 w-100"></input>
+
+            </form>
+            
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
+
+
+
+<%- include('./base/footer.ejs') %>

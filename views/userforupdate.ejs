@@ -1,0 +1,49 @@
+<%- include('./base/header.ejs') %>
+<div class="container">
+    <div class="alert bg-success my-3">
+         <h2 class="text-center" style="color: white;">Update User</h2>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col" style="background-color: #a2b9bc ; border-radius: 2%;">
+            <form action="/update/user/<%= user._id %>" method="post">
+                <div>
+                    <label for="" class="form-label">First Name</label>
+                    <input type="text" name="firstName" class="form-control" value="<%= user.firstName %>">
+                </div>
+                <div>
+                    <label for="" class="form-label">Last Name</label>
+                    <input type="text" name="lastName" class="form-control" value="<%= user.lastName %>">
+                </div>
+                <div>
+                    <label for="" class="form-label">Country</label>
+                    <input type="text" name="country" class="form-control" value="<%= user.country %>">
+                </div>
+                <div>
+                    <label for="" class="form-label">Email </label>
+                    <input type="text" name="email" class="form-control" value="<%= user.email %>">
+                </div>
+                <div>
+                    <label for="" class="form-label">Mobile No</label>
+                    <input type="text" name="mobileNo" class="form-control"  value="<%= user.mobileNo %>">
+                </div>
+                <div>
+                    <label for="" class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control" value="<%= user.password %>">
+                </div>
+                <div>
+                    <label for="" class="form-label">Confirm Password</label>
+                    <input type="password" name="confirmPassword" class="form-control" value="<%= user.confirmPassword %>">
+                </div>
+                <input type="submit" value="Update user" class="btn btn-warning my-3 w-100"></input>
+
+            </form>
+            
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
+<%- include('./base/footer') %>

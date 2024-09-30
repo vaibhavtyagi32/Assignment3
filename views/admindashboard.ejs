@@ -1,0 +1,66 @@
+<%- include('./base/header.ejs')  %>
+<div class="container" style="margin-top: 50px;"></div>
+    <div class="row" style="width:100%; padding: 1.4%;">
+        <h4 class="text-centre my-3" style="text-align: center;">Book List </h4>
+        <table class="table table-striped-columns table-hover" style="text-align: center;">
+            <thead class="table-dark">
+                <tr>
+                    <th>Book Image</th>
+                    <th>Book Title</th>
+                    <th>Book Author</th>
+                    <th>Book Price</th>  
+                    <th>Book Description</th>
+                    <th>Book Language</th>
+                    <th>Book Category</th>
+                    <th>Book Status</th>
+                    <th>Book Quantity</th>
+                    <th>Book Rating</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <% book.forEach((book)=>{%>
+                <tr>
+                    <td><%= book.bookImage %></td>
+                    <td><%= book.bookTitle %></td> 
+                    <td><%= book.bookAuthor %></td>
+                    <td><%= book.bookPrice %></td>
+                    <td><%= book.bookDescription %></td>
+                    <td><%= book.bookLanguage %></td>
+                    <td><%= book.bookCategory %></td>
+                    <td><%= book.bookStatus %></td>
+                    <td><%= book.bookQuantity %></td>
+                    <td><%= book.bookRating %></td>
+                    <td>
+                        <a href="/edit/book/page/<%= book._id %>" class="btn btn-success rounded-1">Edit</a>
+                        <a href="/delete/book/page/<%= book._id %>" class="btn btn-danger rounded-1">Delete</a>
+                    </td>
+                </tr>
+           <% }) %>
+        </table>
+    </div>
+</div>
+<%- include('./base/footer.ejs')  %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="div"></div>
+    <div class="a">
+        <a href="/bookform" class="btn btn-warning w-40" >Add Book</a>
+    </div>
+    <div class="a">
+        <a class="btn btn-warning w-45" aria-current="page" href="/getallbooks"  >Books</a>
+    </div>
+    <div class="a">
+        <a class="btn btn-warning w-45" href="/getuser">Users List</a>
+    </div>
+</div> -->
